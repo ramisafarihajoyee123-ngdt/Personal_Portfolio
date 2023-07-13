@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Ramisa's Portfolio</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md" id="section1">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#section1">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section2">About</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section3">Achievements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section4">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section5">Professional Affiliation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section6">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section7">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section8">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-danger navbar-btn"><a class="nav-link"
+                                href="C:\Users\itngd\Downloads\Portfolio\RamisaFarihaJoyee_Resume.pdf" download>Download
+                                CV</a></button>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="col-md-7">
+            <br><br>
+            <h1 class="big-font">Hi! I'm RAMISA FARIHA JOYEE</h1></br></br>
+            <p class="custom-font">Welcome to my portfolio! </br>
+                I am a passionate and
+                motivated person. I am excited to share with you my journey and projects as I progress in my
+                career in the field of software engineering.
+            </p>
+        </div>
+        <div class="col-md-5">
+            <div class="oval-image">
+                <img src="C:\Users\itngd\Downloads\Portfolio\images\profile.jpg" alt="Profile Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="section2">
+        <div class="col-md-14">
+            <br><br><br>
+            <h2 class="big-font" style="background-color:rgb(158, 194, 230);">About me</h2>
+            <p class="custom-font">
+                Through this portfolio, you will find a showcase of my projects, demonstrating my problem-solving
+                skills, creativity, and attention to detail. These experiences have helped me grow both
+                professionally and personally, and have solidified my passion for software engineering.</br></br>
+
+                Thank you for taking the time to explore my portfolio. I am open to new opportunities and
+                challenges, and I look forward to connecting with industry professionals and fellow software
+                engineers. Please feel free to reach out to me through the contact information provided in
+                this portfolio. Let's connect and explore how we can collaborate to create innovative and
+                impactful solutions together.</br></br>
+
+                Thank you again for visiting, and I hope you enjoy exploring my work!
+            </p>
+        </div>
+    </div>
+
+    <div class="bar-pie" id="section3">
+        <div>
+            <br><br>
+            <h2 class="big-font" style="background-color:rgb(158, 194, 230)">Achievements</h2>
+            <br>
+            <div>
+                <canvas id="lineChart"></canvas>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                const data = {
+                    labels: ['Prize 1', 'Prize 2', 'Prize 3', 'Prize 4', 'Prize 5', 'Prize 6', 'Prize 7', 'Prize 8', 'Prize 9'],
+                    datasets: [
+                        {
+                            label: 'Prizes throughout the Years ',
+                            data: ['2023', '2023', '2022', '2022', '2021', '2020', '2018', '2018', '2017', '2015'],
+                            borderColor: 'blue',
+                            fill: false,
+                            borderWidth: 0.9
+                        }
+                    ]
+                };
+                const ctx = document.getElementById('lineChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: data,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false
+                    }
+                });
+            </script>
+            <br>
+            <p class="unordered-font">Prizes Details:</p>
+            <ul class="unordered-font1">
+                <li>Dummy prize 1 [2023]</li>
+                <li>Dummy prize 2 [2023]</li>
+                <li>Dummy prize 3 [2022]</li>
+                <li>Dummy prize 4 [2022]</li>
+                <li>Dummy prize 5 [2021]</li>
+                <li>Dummy prize 6 [2020]</li>
+                <li>Dummy prize 7 [2018]</li>
+                <li>Dummy prize 8 [2017]</li>
+                <li>Dummy prize 9 [2015]</li>
+            </ul>
+            <p class="unordered-font">Leetcode: <a
+                    href="https://leetcode.com/problemset/all/">https://leetcode.com/problemset/all/</a></p>
+        </div>
+    </div>
+
+    <div class="bar-pie" id="section4">
+        <div>
+            <h2 class="big-font" style="background-color:rgb(158, 194, 230)">Skills</h2>
+        </div>
+        <div>
+            <select id="chartTypeSelect" onchange="changeChartType()">
+                <option value="bar">Bar Chart</option>
+                <option value="pie">Pie Chart</option>
+            </select>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="chartCanvas"></canvas>
+        </div>
+
+        <script>
+            let chartType = 'bar';
+            let chartInstance;
+
+            function createBarChart() {
+                const canvas = document.getElementById('chartCanvas');
+                const ctx = canvas.getContext('2d');
+
+                if (chartInstance) {
+                    chartInstance.destroy();
+                }
+
+                chartInstance = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Python', 'Java', 'HTML', 'C', 'Django', 'Javascript', 'PHP'],
+                        datasets: [{
+                            label: 'Programming Language Skillset',
+                            data: [94, 80, 85, 60, 20, 30, 50],
+                            backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            }
+
+            function createPieChart() {
+                const canvas = document.getElementById('chartCanvas');
+                const ctx = canvas.getContext('2d');
+
+                if (chartInstance) {
+                    chartInstance.destroy();
+                }
+
+                chartInstance = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Python', 'Java', 'HTML', 'C', 'Django', 'Javascript', 'PHP'],
+                        datasets: [{
+                            label: 'Programming Language Skillset',
+                            data: [94, 80, 85, 60, 20, 30, 50],
+                            backgroundColor: ['rgba(255, 99, 132, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(255, 206, 86, 0.5)',
+                                'rgba(87, 214, 45, 0.5)', 'rgba(153, 102, 255, 0.5)', 'rgba(214, 87, 36, 0.5)',
+                                'rgba(181, 54, 166, 0.5)'],
+                            borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)',
+                                'rgba(87, 214, 45, 1)', 'rgba(153, 102, 255, 1)', 'rgba(214, 87, 36, 1)',
+                                'rgba(181, 54, 166, 1)'],
+                            borderWidth: 1
+                        }]
+                    }
+                });
+            }
+
+            function changeChartType() {
+                const selectElement = document.getElementById('chartTypeSelect');
+                chartType = selectElement.value;
+
+                if (chartType === 'bar') {
+                    createBarChart();
+                } else if (chartType === 'pie') {
+                    createPieChart();
+                }
+            }
+
+            // Initialize the chart on page load
+            window.onload = function () {
+                createBarChart();
+            };
+        </script>
+    </div>
+
+    <div id="section5">
+        <div>
+            <br><br><br>
+            <h2 class="big-font" style="background-color:rgb(158, 194, 230)">Professional Affiliation</h2>
+            <br>
+
+            <div class="custom-font1">
+                <h4 class="text-success">Software Engineering Intern</h4>
+                <p>July, 2023 - Present<br>
+                    NextGen DigiTech Ltd. Bangladesh<br>
+                    Dhaka, Bangladesh<br>
+                    Website: <a href="https://nextgendgtech.com/">https://nextgendgtech.com/</a></p>
+                <br>
+                <h4 class="text-success">Student Tutor</h4>
+                <p>February, 2022 - December, 2022<br>
+                    BRAC University<br>
+                    Dhaka, Bangladesh<br>
+                    Website: <a href="https://www.bracu.ac.bd/">https://www.bracu.ac.bd/</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="section6">
+        <div>
+            <br><br><br>
+            <h2 class="big-font" style="background-color:rgb(158, 194, 230)">Project</h2>
+            <br>
+
+            <div class="custom-font1">
+                <h4 class="text-success">Application of Deep Learning in MRI Classification of Schizophrenia</h4>
+                <li>Explored different databases to collect relevant medical data</li>
+                <li>Performed pre-processing and train/test data</li>
+                <li>Fine-tuned of schizophrenia classification model</li>
+                <li>Optimized and converted model for faster classification</li>
+                <br>
+                <h4 class="text-success">Recipe Book Website</h4>
+                <li>Incorporated PHP language through Laravel framework with mariaDB database in MVC architecture</li>
+                <li>Implemented features such as - recipe upload-download, create recipe blog, share recipes etc.</li>
+                <li>Github Link: <a href="https://github.com/ramisafarihajoyee/RecipeBook">Recipe Book Website</a></li>
+                <br>
+                <h4 class="text-success">Automated Car</h4>
+                <li>Implemented features such as - horn detection to avoid accidents, humidity and temperature
+                    measurement, movement detection for safety etc. with the help of some sensors and
+                    input-output devices</li>
+                <li>rduino based project</li>
+            </div>
+        </div>
+    </div>
+
+    <div id="section7">
+        <div>
+            <br><br><br>
+            <h2 class="big-font" style="background-color:rgb(158, 194, 230)">Research</h2>
+            <br>
+
+            <h1 class="unordered-font">Journal Papers:</h1>
+            <ul class="unordered-font1">
+                <li>Dummy paper 1 [2023]</li>
+                <li>Dummy paper 2 [2023]</li>
+                <li>Dummy paper 3 [2022]</li>
+                <li>Dummy paper 3 [2022]</li>
+                <li>Dummy paper 3 [2021]</li>
+                <li>Dummy paper 3 [2020]</li>
+            </ul>
+
+            <h1 class="unordered-font">Conference Papers:</h1>
+            <ul class="unordered-font1">
+                <li>Dummy paper 1 [2023]</li>
+                <li>Dummy paper 2 [2022]</li>
+                <li>Dummy paper 3 [2022]</li>
+                <li>Dummy paper 3 [2022]</li>
+                <li>Dummy paper 3 [2021]</li>
+                <li>Dummy paper 3 [2019]</li>
+            </ul>
+
+            <h1 class="unordered-font">Research Interests:</h1>
+            <ul class="unordered-font1">
+                <li>Artificial Intelligence</li>
+                <li>Cyber Security</li>
+                <li>Internet of Things</li>
+                <li>Software Engineering</li>
+                <li>Data Science</li>
+            </ul>
+        </div>
+        <br><br><br>
+    </div>
+
+
+
+    <div class="colored-section" id="section8">
+        <h2 class="big-font">Contact Me</h2>
+        <div class="contact-info">
+            <span>&#128241;</span> Phone: <a href="tel:+8801677040320">+8801677040320</a>
+        </div>
+
+        <div class="contact-info">
+            <span>&#128231;</span> Email: <a
+                href="mailto:ramisafariha.joyee123@gmail.com">ramisafariha.joyee123@gmail.com</a>
+        </div>
+
+        <div class="contact-info">
+            <i class="fa fa-linkedin" style="font-family: Monospace, sans-serif">
+                LinkedIn: <a href="https://bd.linkedin.com/in/ramisa-fariha-joyee-198234243">LinkedIn Profile</a>
+            </i>
+        </div>
+
+        <div class="contact-info">
+            <form id="myForm">
+                <br>
+                <p class="text-left">If any question occurs, please fill up the google form. </p>
+                <label for="name">Name: </label>
+                <input type="text" id="name" required>
+
+                <br>
+                <label for="comment">Comment:</label>
+                <input type="text" id="comment" required>
+
+                <br>
+                <button type="button" onclick="submitToGoogleForm()">Submit</button>
+            </form>
+
+            <script>
+                function submitToGoogleForm() {
+                    var form = document.getElementById("myForm");
+                    var name = form.elements["name"].value;
+                    var comment = form.elements["comment"].value;
+
+                    var googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSey3v1Kh7CwGYIqF-Ghv_fWupwz_cW7jSQjhEilLaEmhJINeg/viewform?usp=sf_link";
+                    var submissionUrl = googleFormUrl + "&entry.913078809=" + encodeURIComponent(name) + "&entry.934902582=" + encodeURIComponent(comment);
+
+                    window.open(submissionUrl, "_blank");
+                    form.reset();
+                }
+            </script>
+        </div>
+    </div>
+
+    <!-- Your content goes here -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>
